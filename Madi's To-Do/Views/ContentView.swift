@@ -14,6 +14,7 @@ struct ContentView: View {
     @ObservedObject var taskStore: TaskStore
     @Environment(\.managedObjectContext) var managedObjectContext
     @State var modalIsPresented = false
+    let accentBlue = Color(red: 32.0 / 255.0, green: 121.0 / 255.0, blue: 249.0 / 255.0)
     @FetchRequest(
         entity: MDTask.entity(),
         sortDescriptors: [
@@ -46,14 +47,22 @@ struct ContentView: View {
         NavigationView {
             
             List{
-//                ForEach(taskStore.prioritizedTasks) { index in
-//                    SectionView(prioritizedTasks: self.$taskStore.prioritizedTasks[index])
-//                }
+                //                ForEach(taskStore.prioritizedTasks) { index in
+                //                    SectionView(prioritizedTasks: self.$taskStore.prioritizedTasks[index])
+                //                }
                 SectionView(priorityName: "High", tasks: highPriorityTasks).environment(\.managedObjectContext, self.managedObjectContext)
                 SectionView(priorityName: "Medium", tasks: mediumPriorityTasks).environment(\.managedObjectContext, self.managedObjectContext)
                 SectionView(priorityName: "Low", tasks: lowPriorityTasks).environment(\.managedObjectContext, self.managedObjectContext)
                 SectionView(priorityName: "No", tasks: noPriorityTasks).environment(\.managedObjectContext, self.managedObjectContext)
                 
+                NavigationLink(destination: AboutView()) {
+                    HStack {
+                        Image("InfoIcon")
+                        Text("Info")
+                        .accentColor(accentBlue)
+                        .foregroundColor(accentBlue)
+                    }
+                }
             }
             .listStyle( GroupedListStyle() )
             .navigationBarTitle("Tasks")
@@ -73,11 +82,11 @@ struct ContentView: View {
         .onReceive(self.didSave) { _ in
             
         }
-//        List{
-//            ForEach(mdTasks, id: \.self) { task in
-//                Text("Task priority: \(task.priority ?? "hmm")")
-//            }
-//        }
+        //        List{
+        //            ForEach(mdTasks, id: \.self) { task in
+        //                Text("Task priority: \(task.priority ?? "hmm")")
+        //            }
+        //        }
     }
 }
 
@@ -86,8 +95,3 @@ struct ContentView_Previews: PreviewProvider {
         ContentView(taskStore: TaskStore() )
     }
 }
-
-//HStack {
-//    Image("InfoIcon")
-//    Text("Info").modifier(ButtonSmallTextStyle())
-//}

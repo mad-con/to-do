@@ -25,6 +25,7 @@
 		D35824E523E53C5400A4CBF3 /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35824E423E53C5400A4CBF3 /* SectionView.swift */; };
 		D35824E723E5F5CE00A4CBF3 /* Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35824E623E5F5CD00A4CBF3 /* Binding.swift */; };
 		D35824EA23E5FD1000A4CBF3 /* MDTasksStore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D35824E823E5FD1000A4CBF3 /* MDTasksStore.xcdatamodeld */; };
+		D358251B23E66DD500A4CBF3 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D358251A23E66DD400A4CBF3 /* AboutView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		D35824E423E53C5400A4CBF3 /* SectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionView.swift; sourceTree = "<group>"; };
 		D35824E623E5F5CD00A4CBF3 /* Binding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Binding.swift; sourceTree = "<group>"; };
 		D35824E923E5FD1000A4CBF3 /* MDTask.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MDTask.xcdatamodel; sourceTree = "<group>"; };
+		D358251A23E66DD400A4CBF3 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				D35824B923DFC31B00A4CBF3 /* ContentView.swift */,
+				D358251A23E66DD400A4CBF3 /* AboutView.swift */,
 				D35824E423E53C5400A4CBF3 /* SectionView.swift */,
 				D35824D523E3B15F00A4CBF3 /* RowView.swift */,
 				D35824CE23DFE14C00A4CBF3 /* NewTaskView.swift */,
@@ -206,6 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D358251B23E66DD500A4CBF3 /* AboutView.swift in Sources */,
 				D35824E123E536BA00A4CBF3 /* Task.Proirity.swift in Sources */,
 				D35824CD23DFD48400A4CBF3 /* TaskStore.swift in Sources */,
 				D35824CA23DFD35600A4CBF3 /* Task.swift in Sources */,

@@ -14,12 +14,12 @@ struct NewTaskView: View {
     @Environment(\.managedObjectContext) var managedObjectContext
     @State var text = ""
     @State var priority: Task.Priority = .no
-    @State var notes = ""
+//    @State var notes = ""
     
     var body: some View {
         Form {
             TextField("Task Name", text: $text)
-            TextField("Notes", text: $notes)
+//            TextField("Notes", text: $notes)
             
             VStack {
                 Text("Priority")
@@ -45,6 +45,7 @@ struct NewTaskView: View {
                 task.name = self.text
                 task.priority = self.priority.rawValue.capitalized
                 task.id = UUID()
+//                task.notes = self.notes
                 do {
                     try self.managedObjectContext.save()
                 } catch {

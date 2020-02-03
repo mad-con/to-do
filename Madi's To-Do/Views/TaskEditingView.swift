@@ -10,6 +10,7 @@ import SwiftUI
 
 struct TaskEditingView: View {
     @ObservedObject var task: MDTask
+//    @State var notes:String = ""
     @State var name:String = ""
     @State var completed:Bool = false
     @Environment(\.managedObjectContext) var managedObjectContext
@@ -17,6 +18,9 @@ struct TaskEditingView: View {
     
     var body: some View {
         Form {
+//            TextField("Notes", text: $notes)
+//                .onAppear { self.notes = self.task.notes ?? ""
+//            }
             TextField("Name", text: $name)
                 .onAppear {
                     self.name = self.task.name ?? ""
