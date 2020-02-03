@@ -7,13 +7,14 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct TaskEditingView: View {
     @ObservedObject var task: MDTask
 //    @State var notes:String = ""
     @State var name:String = ""
     @State var completed:Bool = false
-    @Environment(\.managedObjectContext) var managedObjectContext
+    @Environment(\.managedObjectContext) var managedObjectContext:NSManagedObjectContext
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {

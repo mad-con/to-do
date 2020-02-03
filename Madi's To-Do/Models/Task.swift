@@ -9,8 +9,8 @@
 import Foundation
 
 struct Task: Identifiable {
-    let id = UUID()
+    let id:UUID = UUID()
     
     var name: String
-    var completed = false
+    var completed:Bool = false
 }
