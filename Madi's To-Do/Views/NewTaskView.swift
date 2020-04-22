@@ -2,7 +2,7 @@
 //  NewTaskView.swift
 //  Madi's To-Do
 //
-//  Created by Matthew Condie on 1/27/20.
+//  Created by Madi Condie on 1/27/20.
 //  Copyright © 2020 mcondie. All rights reserved.
 //
 
@@ -14,12 +14,12 @@ struct NewTaskView: View {
     @Environment(\.managedObjectContext) var managedObjectContext
     @State var text = ""
     @State var priority: Task.Priority = .no
-//    @State var notes = ""
+    @State var notes = ""
     
     var body: some View {
         Form {
             TextField("Task Name", text: $text)
-//            TextField("Notes", text: $notes)
+            TextField("Notes (optional)", text: $notes)
             
             VStack {
                 Text("Priority")
@@ -45,7 +45,7 @@ struct NewTaskView: View {
                 task.name = self.text
                 task.priority = self.priority.rawValue.capitalized
                 task.id = UUID()
-//                task.notes = self.notes
+                task.notes = self.notes
                 do {
                     try self.managedObjectContext.save()
                 } catch {

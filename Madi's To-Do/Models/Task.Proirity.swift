@@ -2,7 +2,7 @@
 //  Task.Proirity.swift
 //  Madi's To-Do
 //
-//  Created by Matthew Condie on 1/31/20.
+//  Created by Madi Condie on 1/31/20.
 //  Copyright © 2020 mcondie. All rights reserved.
 //
 
